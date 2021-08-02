@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<form class="row form-horizontal" action="/address_detail" method="post">
+  <div class="col-md-4">
+    <label for="street" class="form-label">Address</label>
+    <input type="text" class="form-control" id="street" name="street">
+  </div>
+  <div class="col-md-2">
+    <label for="floor" class="form-label">Floor</label>
+    <input type="text" class="form-control" id="floor" name="floor">
+  </div>
+  <div class="col-md-2">
+    <label for="apartment" class="form-label">Apartment</label>
+    <input type="text" class="form-control" id="apartment" name="apartment">
+  </div>
+  <div class="col-md-2">
+    <label for="code" class="form-label">Postal code</label>
+    <input type="text" class="form-control" id="code" name="code">
+  </div>
+  <div class="col-md-4">
+    <label for="city" class="form-label">City</label>
+    <input type="text" class="form-control" id="city" name="city">
+  </div>
+  <div class="col-md-2">
+    <label for="state" class="form-label">State</label>
+    <input type="text" class="form-control" id="state" name="state">
+  </div>
+  <div class="col-md-4">
+    <label for="country" class="form-label">Country</label>
+    <input type="text" class="form-control" id="country" name="country" placeholder="Colombia">
+  </div>
+  <div class="col-md-6">
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+{% endblock %}

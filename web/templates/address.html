@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<h2>Address</h2>
+<a href="/address_add" class="btn btn-success float-right">Add New Address</a>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Country</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Street</th>
+        <th scope="col">Floor</th>
+        <th scope="col">Apto</th>
+        <th scope="col">Cod Postal</th>
+        <th scope="col">Edit | Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for line in value %}
+    <tr>
+        <th scope="row">{{line[0]}}</th>
+        <td>{{line[1]}}</td>
+        <td>{{line[2]}}</td>
+        <td>{{line[3]}}</td>
+        <td>{{line[4]}}</td>
+        <td>{{line[5]}}</td>
+        <td>{{line[6]}}</td>
+        <td>{{line[7]}}</td>
+        <td>
+            <a href="/address_update/{{line[0]}}" class="btn btn-warning btn-xs">Edit</a>
+            <a href="/address_delete/{{line[0]}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete ?')">Delete</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

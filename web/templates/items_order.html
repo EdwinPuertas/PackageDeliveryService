@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<form class="row g-3" action="/" method="post">
+  <div class="col-md-12">
+    <label for="description" class="form-label">Item description</label>
+    <input type="text" class="form-control" id="description">
+  </div>
+  <div class="col-md-6">
+    <label for="weight" class="form-label">Weight</label>
+    <input type="text" class="form-control" id="weight">
+  </div>
+  <div class="col-md-6">
+    <label for="cost" class="form-label">Cost per gram</label>
+    <input type="text" class="form-control" id="cost" placeholder="500">
+  </div>
+  <div class="col-md-6">
+    <label for="default_value" class="form-label">Fixed Cost</label>
+    <input type="text" class="form-control" id="default_value" placeholder="7000">
+  </div>
+  <div class="col-md-6">
+    <label for="over_weight" class="form-label">Overweight Cost</label>
+    <input type="text" class="form-control" id="over_weight" placeholder="0.00">
+  </div>
+  <div class="col-md-6">
+     <label class="input-group-text" for="package_type">Package Type</label>
+     <select class="form-select" id="package_type">
+       <option selected>Choose...</option>
+       <option value="1">Standard</option>
+        <option value="2">Overweight</option>
+      </select>
+  </div>
+  <div class="col-md-6">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+
+{% endblock %}
